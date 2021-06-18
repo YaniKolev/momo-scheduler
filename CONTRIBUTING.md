@@ -2,6 +2,8 @@
 
 Contributions are very welcome. The following will provide some helpful guidelines.
 
+Hi!
+
 ## How to build the project
 
 ```
