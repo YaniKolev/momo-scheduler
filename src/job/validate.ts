@@ -1,11 +1,11 @@
 import humanInterval from 'human-interval';
 
 import { parseCronExpression } from 'cron-schedule';
-import { Job } from './Job';
 import { Logger } from '../logging/Logger';
 import { MomoErrorType } from '../logging/error/MomoErrorType';
 import { momoError } from '../logging/error/MomoError';
 import { isCronSchedule, isInterval } from './MomoJob';
+import { Job } from './Job';
 
 export function validate({ name, schedule, concurrency, maxRunning }: Job, logger?: Logger): boolean {
   if (isInterval(schedule) && schedule.firstRunAfter < 0) {
